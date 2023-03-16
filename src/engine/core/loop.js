@@ -8,7 +8,6 @@
 
 import * as map from "./resource_map.js";
 import * as input from "../input.js";
-import * as controller_input from "../controller_input.js";
 
 const kUPS = 60; // Updates per second
 const kMPF = 1000 / kUPS; // Milliseconds per update.
@@ -44,7 +43,6 @@ function loopOnce() {
         //      If lag larger then update frames, update until caught up.
         while ((mLagTime >= kMPF) && mLoopRunning) {
             input.update();
-            controller_input.update();
             mCurrentScene.update();      
             mLagTime -= kMPF;
         }

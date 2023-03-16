@@ -16,7 +16,6 @@ import * as texture from "./resources/texture.js";
 
 // general utilities
 import * as input from "./input.js";
-import * as controller_input from "./controller_input.js";
 import Camera from "./camera.js";
 import Scene from "./scene.js";
 import Transform from "./transform.js";
@@ -36,7 +35,6 @@ function init(htmlCanvasID) {
     glSys.init(htmlCanvasID);
     vertexBuffer.init();
     input.init();
-    controller_input.init();
     audio.init();
     shaderResources.init();
 }
@@ -62,7 +60,7 @@ export default {
     audio, text, xml, texture,
 
     // input support
-    input, controller_input,
+    input,
 
     // Util classes
     Camera, Scene, Transform, 
